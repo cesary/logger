@@ -1,0 +1,6 @@
+c:\users\марина\documents\visual studio 2012\Projects\Logger\Logger\bin\Debug\Logger.exe.config
+c:\users\марина\documents\visual studio 2012\Projects\Logger\Logger\bin\Debug\Logger.exe
+c:\users\марина\documents\visual studio 2012\Projects\Logger\Logger\bin\Debug\Logger.pdb
+c:\users\марина\documents\visual studio 2012\Projects\Logger\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+c:\users\марина\documents\visual studio 2012\Projects\Logger\Logger\obj\Debug\Logger.exe
+c:\users\марина\documents\visual studio 2012\Projects\Logger\Logger\obj\Debug\Logger.pdb
