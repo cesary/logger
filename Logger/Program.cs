@@ -43,9 +43,9 @@ namespace Logger
         public override string ToString()
         {
             string name = Path.GetFileName(this.name);
-            string dt = this.dt.ToString();
-            string s = name + " " + dt;
-            return s;
+            string date = this.dt.ToString();
+            string output = String.Format("{0,-55} {1,-20}\n", name, date);
+            return output;
         }
     }
     
@@ -73,17 +73,11 @@ namespace Logger
     }
     class ConsoleLog : iLog 
     {
-        private string name;
-        private string date;
         public void WriteMessage(List<FileInf> filenames) 
         {
-            Console.WriteLine ("{0,-70} {1,35}\n", "Filename", "Date");
+            Console.WriteLine("{0,-55} {1,-20}\n\n", "Filename", "Date");
             foreach (FileInf f in filenames)
-            {
-                name = Path.GetFileName(f.name);
-                date = f.dt.ToString();
-                Console.WriteLine("{0,-70} {1,35}", name, date);
-            }
+                Console.WriteLine(f.ToString());
         }
     }
 
@@ -91,8 +85,10 @@ namespace Logger
     {
         public void WriteMessage(List<FileInf> filenames)
         {
-            string path = "C:\\Users\\Марина\\Downloads\\My_files.txt";
+            string path = "C:\\Users\\Марина\\Downloads\\Sort_Downloads.txt";
+            string header = String.Format("{0,-55} {1,-20}\r\n\r\n", "Filename", "Date");
             File.Delete(path);
+            File.AppendAllText(path, header);
             foreach (FileInf f in filenames)
             {
                 File.AppendAllText(path, f.ToString() + "\r\n");
